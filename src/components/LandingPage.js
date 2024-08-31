@@ -8,13 +8,13 @@ const LandingPage = () => {
     <>
       <Container style={{ textAlign: 'center', marginTop: '50px' }}>
         <Typography variant="h2" component="h1" gutterBottom>
-          Welcome to the App List
+          Moku App Library
         </Typography>
         <Typography variant="h5" component="h2" gutterBottom>
-          Discover and download the best apps.
+          Discover and download the best apps to sideload on your iOS device.
         </Typography>
         <Button variant="contained" color="primary" component={Link} to="/apps">
-          View App List
+          Get Started
         </Button>
       </Container>
       <Footer />

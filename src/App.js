@@ -5,6 +5,7 @@ import AppList from './components/AppList';
 import LandingPage from './components/LandingPage';
 import Footer from './components/Footer';
 import Settings from './components/Settings';
+import Help from './components/Help'; 
 import { Container, CssBaseline } from '@mui/material';
 import { Experimental_CssVarsProvider as CssVarsProvider, useColorScheme, createTheme } from '@mui/material/styles';
 
@@ -62,6 +63,7 @@ const App = () => {
           <Route exact path="/" element={<LandingPage />} />
           <Route path="/apps" element={<AppList drawerOpen={drawerOpen} onDrawerClose={handleDrawerClose} onDrawerOpen={handleDrawerOpen} />} />
           <Route path="/settings" element={<Settings />} />
+          <Route path="/help" element={<Help />} /> {/* Add Help route */}
         </Routes>
       </Container>
       <Footer /> {/* Ensure Footer is outside the Container */}

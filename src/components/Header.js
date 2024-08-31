@@ -20,7 +20,7 @@ const Header = ({ onDrawerOpen }) => {
     <Box sx={{ flexGrow: 1 }}>
       <AppBar position="static">
         <Toolbar>
-          {location.pathname === '/settings' ? (
+          {location.pathname === '/settings' || location.pathname === '/help' ? (
             <IconButton
               size="large"
               edge="start"

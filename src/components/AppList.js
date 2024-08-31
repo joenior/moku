@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
-import { CssBaseline, List, ListItemButton, ListItemAvatar, ListItemText, Avatar, ListSubheader, Paper, Typography, InputBase, Box, Modal, Backdrop, Fade, Button, Stack, Drawer, Skeleton, Pagination } from '@mui/material';
+import { CssBaseline, List, ListItemButton, ListItemAvatar, ListItemText, Avatar, ListSubheader, Paper, Typography, InputBase, Box, Modal, Backdrop, Fade, Button, Drawer, Skeleton, Pagination } from '@mui/material';
 import { styled, alpha } from '@mui/material/styles';
 import SearchIcon from '@mui/icons-material/Search';
-import { Link, useLocation } from 'react-router-dom';
+import { useLocation } from 'react-router-dom';
 
 const Search = styled('div')(({ theme }) => ({
   position: 'relative',
@@ -46,7 +46,7 @@ const StyledInputBase = styled(InputBase)(({ theme }) => ({
 }));
 
 const repoUrls = [
-  { title: "YouTube Mod", url: "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json" },
+  { title: "uYouLite", url: "https://raw.githubusercontent.com/YTLitePlus/YTLitePlus-Altstore/main/apps.json" },
   { title: "RandomBlock1", url: "https://randomblock1.com/altstore/apps.json" },
   { title: "CyPwn", url: "https://api.allorigins.win/raw?url=https://ipa.cypwn.xyz/cypwn.json" },
   { title: "Wuxu Complete Plus", url: "https://wuxu1.github.io/wuxu-complete-plus.json" },
@@ -57,7 +57,8 @@ const repoUrls = [
   { title: "Binnichtaktiv", url: "https://api.allorigins.win/raw?url=https://binnichtaktiv.signapp.me/repo/esign.json" },
   { title: "EeveeSpotify", url: "https://raw.githubusercontent.com/whoeevee/EeveeSpotify/swift/repo.json" },
   { title: "Enmity Mod", url: "https://enmity-mod.github.io/repo/altstore.json" },
-  { title: "AIO Yippee", url: "https://api.allorigins.win/raw?url=https://aio.yippee.rip/repo.json" }
+  { title: "AIO Yippee", url: "https://api.allorigins.win/raw?url=https://aio.yippee.rip/repo.json" },
+  { title: "Hann8n", url: "https://api.allorigins.win/raw?url=https://github.com/Hann8n/JackCracks/blob/main/test.json" }
 ];
 
 const AppList = ({ drawerOpen, onDrawerClose, onDrawerOpen }) => {
@@ -154,7 +155,7 @@ const AppList = ({ drawerOpen, onDrawerClose, onDrawerOpen }) => {
       <CssBaseline enableColorScheme /> {/* Enable color scheme for scrollbar */}
       <Drawer anchor="left" open={drawerOpen} onClose={onDrawerClose}>
         <Box sx={{ width: 250, p: 2 }}>
-          <Typography variant="h6">Change Repo URL</Typography>
+          <Typography variant="h6">Repositories</Typography>
           <List>
             {repoUrls.map((repo, index) => (
               <ListItemButton key={index} onClick={() => handleRepoUrlChange(repo.url)}>
@@ -169,7 +170,7 @@ const AppList = ({ drawerOpen, onDrawerClose, onDrawerOpen }) => {
       </Drawer>
       <Paper square sx={{ mt: 4 }}>
         <Typography variant="h5" gutterBottom component="div" sx={{ p: 2, pb: 0 }}>
-          App List
+          App Library
         </Typography>
         <Box sx={{ p: 2 }}>
           <Search>
@@ -187,7 +188,7 @@ const AppList = ({ drawerOpen, onDrawerClose, onDrawerOpen }) => {
         {repoUrl === '' ? (
           <Box sx={{ p: 2, textAlign: 'center' }}>
             <Typography variant="h6">
-              Please choose your repo first
+              Welcome to app library.
             </Typography>
             <Button variant="contained" color="primary" onClick={onDrawerOpen} sx={{ mt: 2 }}>
               Choose Repo
