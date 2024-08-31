@@ -69,6 +69,7 @@ const AppList = ({ drawerOpen, onDrawerClose, onDrawerOpen }) => {
   const [repoUrl, setRepoUrl] = useState(''); // Default URL is empty
   const [loading, setLoading] = useState(false);
   const location = useLocation();
+   // eslint-disable-next-line 
   const query = new URLSearchParams(location.search);
   const [currentPage, setCurrentPage] = useState(1);
   const itemsPerPage = 20;
