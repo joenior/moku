@@ -2,6 +2,7 @@
   "name": "app-list",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://app-list-nine.vercel.app",
   "dependencies": {
     "@babel/plugin-proposal-private-property-in-object": "^7.14.5",
     "@emotion/react": "^11.13.3",
